@@ -1,2 +1,10 @@
-# spring-Inmobiliaria
-Proyecto de ejemplo de Spring MVC
+# Spring web MVC - Inmobiliaria
+- Spring 5
+- Spring Boot
+  - Spring security
+  - Spring Web MVC
+  - Thymeleaf
+  - Spring JPA
+  - PostgreSQL
+- Upload file to server
+- Bootstrap
