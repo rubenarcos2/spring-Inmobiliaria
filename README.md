@@ -6,3 +6,4 @@
   - Thymeleaf
   - Spring JPA
   - PostgreSQL
+- Upload file to server
