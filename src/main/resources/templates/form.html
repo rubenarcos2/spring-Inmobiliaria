@@ -42,10 +42,24 @@
 					<li><a href="/">Inicio</a></li>
 					<li class="active"><a href="#">Nueva vivienda</a></li>
 				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">
+							<span th:text="${#authentication.name}">Login</span> <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="javascript:document.getElementById('logoutForm').submit()">Salir</a>
+							</li>
+						</ul>
+				</ul>
 			</div>
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
+	
+	<form th:action="@{/logout}" method="POST" id="logoutForm">
 
 	<div class="container">
 
@@ -88,7 +102,8 @@
 					<button type="submit" class="btn btn-default">Enviar</button>
 				</form>
 				<br>
-				<img th:src="${houseForm.photos != null} ? @{${'/user-photos/' + houseForm.id + '/'  + houseForm.photos}} : '' " />
+				<img
+					th:src="${houseForm.photos != null} ? @{${'/user-photos/' + houseForm.id + '/'  + houseForm.photos}} : '' " />
 			</div>
 		</div>
 
